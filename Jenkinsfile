@@ -6,7 +6,8 @@ pipeline {
         SSH_CRED = credentials('SSH-CRED')
     }
     options {
-        buildDiscarder(logRotator(numToKeepStr: '3')) }
+        buildDiscarder(logRotator(numToKeepStr: '3'))
+        disableConcurrentBuilds(
     }
     stages {
         stage('First Stage Name') {

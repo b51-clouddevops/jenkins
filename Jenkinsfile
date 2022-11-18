@@ -14,6 +14,7 @@ pipeline {
             steps {
                 sh "echo One"
                 sh "env"
+                sh "sleep 1000"
             }
         }
         stage('Second Stage Name') {

@@ -25,6 +25,7 @@ pipeline {
                       echo AWS
                       echo DevOps
                       echo Bash
+                      sh "echo ENV_URL is ${ENV_URL}"
                     '''
                 }
             }

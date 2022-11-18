@@ -7,6 +7,12 @@ pipeline {
                 STEP2
             }
         }
+        stage('Second Stage Name') {
+            steps {
+                STEP1
+                STEP2
+            }
+        }
     }
 }
 

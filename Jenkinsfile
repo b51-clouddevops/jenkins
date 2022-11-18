@@ -2,7 +2,7 @@ pipeline {
     agent any 
     environment {
         ENV_URL = "pipeline.google.com"
-        ACCESS_KEY = "sadf2 354dfw3jtrflk;jneqvoit43"
+        ACCESS_KEY = "sadf2354dfw3jtrflk;jneqvoit43"
     }
     stages {
         stage('First Stage Name') {

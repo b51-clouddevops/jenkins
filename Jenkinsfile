@@ -1,9 +1,9 @@
-pipeline {
-    /* Declarative Pipeline */
-}
+// pipeline {
+//     /* Declarative Pipeline */
+// }
 
 
 
-node {
-    /* scripted pipeline */
-}
+// node {
+//     /* scripted pipeline */
+// }

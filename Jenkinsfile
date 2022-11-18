@@ -15,13 +15,13 @@ pipeline {
             steps {
                  sh '''
                       echo AWS
-                    echo DevOps
-                        echo Bash
+                      echo DevOps
+                      echo Bash
                     '''
+                }
             }
         }
     }
-}
 
 
 

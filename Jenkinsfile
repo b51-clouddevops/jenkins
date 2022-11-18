@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Second Stage Name') {
             steps {
-                 echo "One"
-                 
+                 sh "echo One"
+
             }
         }
         stage('Third Stage Name') {

@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('First Stage Name') {
             steps {
-                
+                STEP
+                STEP
             }
         }
     }

@@ -8,8 +8,7 @@ pipeline {
         }
         stage('Second Stage Name') {
             steps {
-                STEP1
-                STEP2
+                 echo "One"
             }
         }
     }

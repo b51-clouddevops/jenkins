@@ -5,5 +5,5 @@ pipeline {
 
 
 node {
-    /* scripted pi */
+    /* scripted pipeline */
 }

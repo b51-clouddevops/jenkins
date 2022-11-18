@@ -1,7 +1,11 @@
 pipeline {
     agent any 
     stages {
-        stage('First Stage Name')
+        stage('First Stage Name') {
+            steps {
+                
+            }
+        }
     }
 }
 

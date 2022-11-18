@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    environment {
+        
+    }
     stages {
         stage('First Stage Name') {
             steps {

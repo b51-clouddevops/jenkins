@@ -14,7 +14,8 @@ pipeline {
         stage('Second Stage Name') {
             steps {
                  sh "echo One"
-                 sh "echo ENV_URL is ${ENV_URL}"  $ACCESS_KEY
+                 sh "echo ENV_URL is ${ENV_URL}"
+                 sh "echo $ACCESS_KEY"
 
             }
         }

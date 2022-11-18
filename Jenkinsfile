@@ -21,12 +21,7 @@ pipeline {
                 ENV_URL = "stage.google.com"
             }
             steps {
-                 sh '''
-                      echo AWS
-                      echo DevOps
-                      echo Bash
-                      sh "echo ENV_URL is ${ENV_URL}"
-                    '''
+                 sh "echo ENV_URL is ${ENV_URL}"
                 }
             }
         }

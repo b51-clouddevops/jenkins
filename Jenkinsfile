@@ -5,6 +5,9 @@ pipeline {
         ACCESS_KEY = credentials('AWS_ACCESS_KEY')
         SSH_CRED = credentials('SSH-CRED')
     }
+    options {
+        
+    }
     stages {
         stage('First Stage Name') {
             steps {

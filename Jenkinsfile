@@ -17,9 +17,9 @@ pipeline {
             }
         }
         stage('Third Stage Name') {
-                environment {
-                    ENV_URL = "pipeline.google.com"
-                }
+            environment {
+                ENV_URL = "pipeline.google.com"
+            }
             steps {
                  sh '''
                       echo AWS

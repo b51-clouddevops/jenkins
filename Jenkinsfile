@@ -12,6 +12,7 @@ pipeline {
         stage('Second Stage Name') {
             steps {
                  sh "echo One"
+                 sh
 
             }
         }

@@ -22,32 +22,32 @@ pipeline {
             maven 'maven-3.5.0' 
         }
     stages {
-      
-        stage('First Stage Name') {
-            steps {
-                sh 'mvn --version'
-                sh "echo One"
-                sh "env"
-                sh "sleep 50"
-            }
-        }
-        stage('Second Stage Name') {
-            steps {
-                 sh "echo One"
-                 sh "echo ENV_URL is ${ENV_URL}"
-                 sh "echo $ACCESS_KEY"
-                 sh "sleep 150"
-            }
-        }
-        stage('Third Stage Name') {
-            environment {
-                ENV_URL = "stage.google.com"
-            }
-            steps {
-                 sh "echo ENV_URL is ${ENV_URL}"
-                 sh "sleep 350"
+        stage()
+            stage('First Stage Name') {
+                steps {
+                    sh 'mvn --version'
+                    sh "echo One"
+                    sh "env"
+                    sh "sleep 50"
                 }
             }
+            stage('Second Stage Name') {
+                steps {
+                    sh "echo One"
+                    sh "echo ENV_URL is ${ENV_URL}"
+                    sh "echo $ACCESS_KEY"
+                    sh "sleep 150"
+                }
+            }
+            stage('Third Stage Name') {
+                environment {
+                    ENV_URL = "stage.google.com"
+                }
+                steps {
+                    sh "echo ENV_URL is ${ENV_URL}"
+                    sh "sleep 350"
+                    }
+                }
         }
     }
 

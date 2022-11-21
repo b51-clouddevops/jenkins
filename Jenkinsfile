@@ -26,7 +26,7 @@ pipeline {
             parallel {
             stage('First Stage Name') {
                 steps {
-                    sh "hostname"
+                    sh "hostname"   // I want this job to run this on WS
                     sh 'mvn --version'
                     sh "echo One"
                     sh "env"

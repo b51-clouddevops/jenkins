@@ -18,9 +18,9 @@ pipeline {
         disableConcurrentBuilds()
         timeout(time: 1, unit: 'MINUTES')
     }
-  tools {
-        maven 'apache-maven-3.0.1' 
-    }
+    tools {
+            maven 'apache-maven-3.0.1' 
+        }
     stages {
         stage('First Stage Name') {
             steps {

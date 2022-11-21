@@ -23,6 +23,7 @@ pipeline {
         }
     stages {
         stage('Paralle') {
+            parallel {
             stage('First Stage Name') {
                 steps {
                     sh 'mvn --version'
@@ -48,6 +49,7 @@ pipeline {
                     sh "sleep 350"
                     }
                 }
+            }    
         }
     }
 }

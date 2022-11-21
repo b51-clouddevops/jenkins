@@ -27,6 +27,7 @@ pipeline {
                 sh 'mvn --version'
                 sh "echo One"
                 sh "env"
+                sh "sleep 50"
             }
         }
         stage('Second Stage Name') {
@@ -34,6 +35,7 @@ pipeline {
                  sh "echo One"
                  sh "echo ENV_URL is ${ENV_URL}"
                  sh "echo $ACCESS_KEY"
+                 sh "sleep 150"
             }
         }
         stage('Third Stage Name') {

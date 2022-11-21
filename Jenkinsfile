@@ -44,6 +44,7 @@ pipeline {
             }
             steps {
                  sh "echo ENV_URL is ${ENV_URL}"
+                 sh "sleep 350"
                 }
             }
         }

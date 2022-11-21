@@ -26,6 +26,7 @@ pipeline {
             parallel {
             stage('First Stage Name') {
                 steps {
+                    sh "hostname"
                     sh 'mvn --version'
                     sh "echo One"
                     sh "env"

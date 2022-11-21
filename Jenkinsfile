@@ -22,7 +22,7 @@ pipeline {
             maven 'maven-3.5.0' 
         }
     stages {
-        stage('Paralle') {
+        stage('Parallel Stage') {
             parallel {
             stage('First Stage Name') {
                 steps {

@@ -29,7 +29,7 @@ pipeline {
                     sh 'mvn --version'
                     sh "echo One"
                     sh "env"
-                    sh "sleep 50"
+                    sh "sleep 10"
                 }
             }
             stage('Second Stage Name') {

@@ -37,7 +37,7 @@ pipeline {
                     sh "echo One"
                     sh "echo ENV_URL is ${ENV_URL}"
                     sh "echo $ACCESS_KEY"
-                    sh "sleep 150"
+                    sh "sleep 20"
                 }
             }
             stage('Third Stage Name') {
@@ -46,7 +46,7 @@ pipeline {
                 }
                 steps {
                     sh "echo ENV_URL is ${ENV_URL}"
-                    sh "sleep 350"
+                    sh "sleep 21"
                     }
                 }
             }    

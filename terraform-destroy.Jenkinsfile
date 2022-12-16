@@ -8,7 +8,7 @@ pipeline {
     }
     stages {
 
-        stage('Terraform Create Databses') {
+        stage('Terraform Destroy Databses') {
             steps {
                 git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-databases.git'
                 sh "terrafile -f env-${ENV}/Terrafile"
@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('Terraform Create Network') {
+        stage('Terraform Destroy Network') {
             steps {
                 git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-vpc.git'
                 sh "terrafile -f env-${ENV}/Terrafile"

@@ -18,9 +18,9 @@ pipeline {
             }
         }
 
-        stage('Terraform Plan') {
+        stage('Terraform Create Databses') {
             steps {
-                git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-vpc.git'
+                git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-databases.git'
                 sh "terrafile -f env-${ENV}/Terrafile"
                 sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
                 sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"

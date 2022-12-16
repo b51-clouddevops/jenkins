@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Terraform Create Network') {
             steps {
+                git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-vpc.git'
                 sh "terrafile -f env-${ENV}/Terrafile"
                 sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
                 sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
@@ -19,6 +20,7 @@ pipeline {
 
         stage('Terraform Plan') {
             steps {
+                git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-vpc.git'
                 sh "terrafile -f env-${ENV}/Terrafile"
                 sh "terraform init --backend-config=env-${ENV}/${ENV}-backend.tfvars"
                 sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"

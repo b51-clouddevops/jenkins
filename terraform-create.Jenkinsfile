@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-        stage('Terraform Create Databses') {
+        stage('Terraform Create Databases') {
             steps {
                 git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-databases.git'
                 sh "terrafile -f env-${ENV}/Terrafile"

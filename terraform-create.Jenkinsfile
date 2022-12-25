@@ -46,8 +46,8 @@ pipeline {
                             export TF_VAR_APP_VERSION=2.1.5
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
-                            terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=${APP_VERSION}
-                            terraform apply -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=${APP_VERSION} -auto-approve
+                            terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2
+                            terraform apply -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2 -auto-approve
                           '''
                             }
                         }
@@ -60,8 +60,8 @@ pipeline {
                             export TF_VAR_APP_VERSION=2.1.1
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
-                            terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=${APP_VERSION}
-                            terraform apply -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=${APP_VERSION} -auto-approve
+                            terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2
+                            terraform apply -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2 -auto-approve
                           '''
                             }
                         }

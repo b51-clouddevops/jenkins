@@ -43,7 +43,6 @@ pipeline {
                        dir('USER') {  git branch: 'main', url: 'https://github.com/b50-clouddevops/user.git'
                           sh '''
                             cd terraform-mutable
-                            export TF_VAR_APP_VERSION=2.1.5
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
                             terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2
@@ -57,7 +56,6 @@ pipeline {
                        dir('Catalogue') {  git branch: 'main', url: 'https://github.com/b50-clouddevops/catalogue.git'
                           sh '''
                             cd terraform-mutable
-                            export TF_VAR_APP_VERSION=2.1.1
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
                             terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2
@@ -84,7 +82,6 @@ pipeline {
                     dir('CART') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/cart.git'
                           sh '''
                             cd terraform-mutable
-                            export TF_VAR_APP_VERSION=2.1.1
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
                             terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2
@@ -98,7 +95,6 @@ pipeline {
                     dir('SHIPPING') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/shipping.git'
                           sh '''
                             cd terraform-mutable
-                            export TF_VAR_APP_VERSION=2.1.1
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
                             terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.1
@@ -114,7 +110,6 @@ pipeline {
                     dir('FRONTEND') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/frontend.git'
                           sh '''
                             cd terraform-mutable
-                            export TF_VAR_APP_VERSION=2.1.5
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
                             terraform plan -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.3

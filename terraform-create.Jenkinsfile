@@ -40,7 +40,7 @@ pipeline {
             parallel {
                stage('Creating-User') {
                    steps {
-                       dir('USER') {  git branch: 'main', url: 'https://github.com/b50-clouddevops/user.git'
+                       dir('USER') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/user.git'
                           sh '''
                             cd terraform-mutable
                             terrafile -f env-${ENV}/Terrafile
@@ -53,7 +53,7 @@ pipeline {
                    }
                stage('Creating-Catalogue') {
                    steps {
-                       dir('Catalogue') {  git branch: 'main', url: 'https://github.com/b50-clouddevops/catalogue.git'
+                       dir('Catalogue') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/catalogue.git'
                           sh '''
                             cd terraform-mutable
                             terrafile -f env-${ENV}/Terrafile
@@ -66,7 +66,7 @@ pipeline {
                   }
             stage('Creating-Payment') {
                 steps {
-                    dir('PAYMENT') {  git branch: 'main', url: 'https://github.com/b50-clouddevops/payment.git'
+                    dir('PAYMENT') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/payment.git'
                           sh '''
                             cd terraform-mutable
                             terrafile -f env-${ENV}/Terrafile

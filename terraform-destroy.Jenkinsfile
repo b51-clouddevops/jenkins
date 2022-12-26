@@ -29,7 +29,7 @@ pipeline {
                             cd tf-mutable
                             terrafile -f env-${ENV}/Terrafile
                             terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure
-                            terraform destroy -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.2 -auto-approve
+                            terraform destroy -var-file=env-${ENV}/${ENV}.tfvars  -var APP_VERSION=0.0.3 -auto-approve
                           '''
                             }
                         }

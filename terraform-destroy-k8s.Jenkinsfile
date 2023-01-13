@@ -9,7 +9,7 @@ pipeline {
     stages {    
      stage('DB-n-EKS') {
         parallel {
-            stage('Creating-EKS') {
+            stage('Destroying-EKS') {
             steps {
                 dir('EKS') {  git branch: 'main', url: 'https://github.com/b51-clouddevops/kubernetes.git'
 
@@ -21,7 +21,7 @@ pipeline {
                      }
                  }
             }
-         stage('DB') {
+         stage('Destroying DB') {
             steps {
               dir('DB') {
                 git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-databases.git'
@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('VPC') {
+        stage('Destroying VPC') {
             steps {
               dir('VPC') {
                 git branch: 'main', url: 'https://github.com/b51-clouddevops/terraform-vpc.git'
